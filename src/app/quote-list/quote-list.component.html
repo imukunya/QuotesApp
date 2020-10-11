@@ -1,1 +1,11 @@
-<p>quote-list works!</p>
+<div *ngFor='let quote of QuoteList;let i = index'>
+  <div class="card text-center" style="">
+    <div class="card-body">
+      <h5 class="card-title">{{quote.quote}}</h5>
+      <p class="card-text"></p>
+      <a href="#" class="" (click)="voteUp(quote.id)">Vote Up ({{quote.upvotes}})</a>
+      &nbsp; &nbsp;
+      <a href="#" class="" (click)="voteDown(quote.id)">Vote Down ({{quote.downvotes}})</a>
+    </div>
+  </div>
+</div>

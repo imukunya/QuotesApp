@@ -22,5 +22,9 @@ export class QuoteFormComponent implements OnInit {
   ngOnInit(): void {
 
   }
+  deleteQuotes(){
+    localStorage.removeItem("Quotes");
+    location.reload();
+  }
 
 }

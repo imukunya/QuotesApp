@@ -2,13 +2,14 @@
   <form #goalForm='ngForm' (ngSubmit)='saveQuote()' #quoteForm='ngForm'>
 
     <div class="form-group">
-      <label for="quote">Name</label>
+      <label for="quote">Quote</label>
       <input type="text" class="form-control" id="quote" [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel' required>
       <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
         <p>Add a quote!</p>
       </div>
     </div>
     <button type="submit" class="btn btn-success">Post Quote</button>
+    &nbsp;&nbsp;<button (click)="deleteQuotes()" class="btn btn-danger">Delete Quotes</button>
   </form>
 
 </div>

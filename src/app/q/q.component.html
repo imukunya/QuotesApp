@@ -7,12 +7,17 @@
         <div class="row">
           <div class="col align-self-center mainCol">
             <app-quote-form (addQuote)="saveQuote($event)"></app-quote-form>
+
+            <hr/>
           </div>
+
         </div>
+
         <div class="row">
-          <div class="col align-self-center mainCol">
-              <button (click)="deleteQuotes()">Delete Quotes</button>
+          <div class="col">
+            <app-quote-list [QuoteList]="quotesArr" (upVote)="voteQuoteUp($event)" (downVote)="voteQuoteDown($event)"></app-quote-list>
           </div>
+
         </div>
       </div>
   </body>

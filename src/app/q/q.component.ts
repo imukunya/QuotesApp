@@ -29,11 +29,26 @@ export class QComponent implements OnInit {
     var arr= [];
     this.quotesArr.push(Quote);
     localStorage.setItem("Quotes",JSON.stringify(this.quotesArr));
-    console.log(localStorage.getItem("Quotes"));
   }
 
-  deleteQuotes(){
-    localStorage.removeItem("Quotes");
+
+
+  voteQuoteUp(quoteID){
+    this.quotesArr.forEach(quote => {
+      if(quote.id===quoteID){
+        quote.upvotes = quote.upvotes+1;
+      }
+    });
+    localStorage.setItem("Quotes",JSON.stringify(this.quotesArr));
+
+  }
+  voteQuoteDown(quoteID){
+    this.quotesArr.forEach(quote => {
+      if(quote.id===quoteID){
+        quote.downvotes = quote.downvotes+1;
+      }
+    });
+    localStorage.setItem("Quotes",JSON.stringify(this.quotesArr));
   }
 
 }
