@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Quotes App</title>
+  </head>
+  <body>
+      <div class="container">
+        <div class="row">
+          <div class="col align-self-center mainCol">
+            <app-quote-form (addQuote)="saveQuote($event)"></app-quote-form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col align-self-center mainCol">
+              <button (click)="deleteQuotes()">Delete Quotes</button>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

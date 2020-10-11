@@ -1,0 +1,14 @@
+<div class="container">
+  <form #goalForm='ngForm' (ngSubmit)='saveQuote()' #quoteForm='ngForm'>
+
+    <div class="form-group">
+      <label for="quote">Name</label>
+      <input type="text" class="form-control" id="quote" [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel' required>
+      <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+        <p>Add a quote!</p>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success">Post Quote</button>
+  </form>
+
+</div>
