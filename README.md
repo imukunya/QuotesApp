@@ -1,7 +1,19 @@
 # QuotesApp
+An app that will show some brilliant quotes and also you can add your own quotes, and remove the ones you dont like.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
+## Deployment
+
+  ### Prequisites
+  - node v14+ is installed
+  - angular is installed
+
+  ### Steps
+  - pull the https://github.com/imukunya/QuotesApp.git
+  - to run, Run the command `ng-server --open`
+
+  
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
